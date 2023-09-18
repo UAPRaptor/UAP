@@ -5,9 +5,22 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <header>
-    <!-- ... same header as index.html ... -->
-  </header>
+  <header id="toolbar"></header>
+  <!-- ... rest of your content ... -->
+
+  <script>
+    // Load the toolbar
+    document.addEventListener("DOMContentLoaded", function() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("toolbar").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "toolbar.html", true);
+      xhr.send();
+    });
+  </script>
   <main>
     <h2>Special Links</h2>
     <div class="link-item">
