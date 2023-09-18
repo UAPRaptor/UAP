@@ -29,7 +29,7 @@ header {
 .banner img {
   width: 100%;
   object-fit: cover; /* Cover the entire width of the container */
-  object-position: center top; /* Position the image to the top */
+  object-position: center center; /* Position the image to the center */
 }
 
 /* Style the navigation menu */
